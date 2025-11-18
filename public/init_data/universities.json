@@ -1,0 +1,994 @@
+{
+    "universities": [
+        {
+            "name": "O’zbekiston milliy universiteti",
+            "location": "Vuzgorodok, Toshkent, 100174",
+            "city": "Tashkent",
+            "phone": {
+                "main": "+998-71",
+                "contact1": "227-12-24",
+                "contact2": "246-59-12"
+            },
+            "fax": "246-53-21/246 02-24",
+            "email": "quantos555@gmail.com",
+            "website": "http://www.nuu.uz",
+            "registrationNumber": "997460895"
+        },
+        {
+            "name": "Toshkent davlat texnika universiteti",
+            "location": "Universitetskaya ko'ch., 2 Toshkent, 100095",
+            "city": "Tashkent",
+            "phone": {
+                "main": "+998-71",
+                "contact1": "246-46-00",
+                "contact2": "246-43-25"
+            },
+            "fax": "227-10-32",
+            "email": "bystrov_dv@yahoo.com",
+            "website": "http://tstu.uz",
+            "registrationNumber": "992926048"
+        },
+        {
+            "name": "Toshkent davlat iqtisodiyot universiteti",
+            "location": "Uzbekistanskaya ko'ch, 49 Toshkent, 100003",
+            "city": "Tashkent",
+            "phone": {
+                "main": "+998-71",
+                "contact1": "232-64-21",
+                "contact2": "232-63-08"
+            },
+            "fax": "239-41-23",
+            "email": "blxalo@tdiu.uz",
+            "website": "http://www.tdiu.uz/uzb/",
+            "registrationNumber": "948338737"
+        },
+        {
+            "name": "O’zbekiston davlat jahon tillari universiteti",
+            "location": "Kichik Xalqa Yoli ko'ch, 21a, Toshkent 100138",
+            "city": "Tashkent",
+            "phone": {
+                "main": "+998-71",
+                "contact1": "275-77-95",
+                "contact2": "275-55-57"
+            },
+            "fax": "275-59-08",
+            "email": "usuw_info@edu.uz",
+            "website": "http://www.uzswlu.uz",
+            "registrationNumber": "934733808"
+        },
+        {
+            "name": "Toshkent davlat sharqshunoslik instituti",
+            "location": "Shahrisabz ko'ch, 25, Toshkent, 100047",
+            "city": "Tashkent",
+            "phone": {
+                "main": "+998-71",
+                "contact1": "233-34-24"
+            },
+            "fax": "120-65-65",
+            "email": "mirkamol.trans@mail.ru",
+            "website": "http://www.tashgiv.uz"
+        },
+        {
+            "name": "Toshkent arxitektura-qurilish instituti",
+            "location": "Navoi ko'ch, 13, Toshkent, 100011",
+            "city": "Tashkent",
+            "phone": {
+                "main": "+998-71",
+                "contact1": "241-12-62",
+                "contact2": "241-10-84"
+            },
+            "fax": "241-80-00",
+            "email": "tfa_06@mail.ru",
+            "website": "http://tasi.uzsci.net"
+        },
+        {
+            "name": "Toshkent to’qimachilik va engil sanoat istituti",
+            "location": "Shohjahon ko'ch, 5, Toshkent, 100100",
+            "city": "Tashkent",
+            "phone": {
+                "main": "+998-71",
+                "contact1": "253-06-06",
+                "contact2": "253-10-58"
+            },
+            "fax": "253-36-17",
+            "email": "shohruh1983@umail.uz",
+            "website": "http://www.titli.uz/"
+        },
+        {
+            "name": "Toshkent avtomobil-yo’llari instituti",
+            "location": "Movaraunnahr ko'ch, 20 Toshkent, 100000",
+            "city": "Tashkent",
+            "phone": {
+                "main": "+998-71",
+                "contact1": "233-08-27"
+            },
+            "fax": "232-14-39",
+            "email": "tadi_info@edu.uz",
+            "website": "http://www.tayi.uz"
+        },
+        {
+            "name": "Toshkent moliya instituti",
+            "location": "Amir Temur ko'ch, 60A Toshkent, 100084",
+            "city": "Tashkent",
+            "phone": {
+                "main": "+998-71",
+                "contact1": "234-55-38",
+                "contact2": "234-53-34"
+            },
+            "email": "jonathantrigger@mail.ru, bxab@tfi.uz",
+            "website": "http://www.tfi.uz/"
+        },
+        {
+            "name": "Toshkent davlat pedagogika universiteti",
+            "location": "Yusuf Hos Hojib ko'ch, 103 Toshkent 100100",
+            "city": "Toshkent",
+            "phone": {
+                "main": "+998-71",
+                "contact1": "254-92-02"
+            },
+            "fax": "215-54-20",
+            "email": "tgpu_info@edu.uz",
+            "website": "http://www.tdpu.uz/",
+            "registrationNumber": "934134348"
+        },
+        {
+            "name": "Toshkent kimyo-texnologiya instituti",
+            "location": "Navoi ko'ch, 32 Toshkent, 100011",
+            "city": "Tashkent",
+            "phone": {
+                "main": "+998-71",
+                "contact1": "244-79-20",
+                "contact2": "244-79-17"
+            },
+            "email": "a_ismailov@inbox.ru",
+            "website": "http://www.tcti.uz/",
+            "registrationNumber": "933344768"
+        },
+        {
+            "name": "Andijon davlat universiteti",
+            "location": "Universitetskaya ko'cch, 129 Andijan 110000",
+            "city": "Andijan",
+            "phone": {
+                "main": "+998-374",
+                "contact1": "223 88 62",
+                "contact2": "222-10-76"
+            },
+            "fax": "223 88 30",
+            "email": "wolffar7@mail.ru",
+            "website": "www.adu.uz",
+            "registrationNumber": "933912412"
+        },
+        {
+            "name": "Andijon mashinasozlik instituti",
+            "location": "Bobur ko'ch, 56 Andijan, 110019",
+            "city": "Andijan",
+            "phone": {
+                "main": "+998-374",
+                "contact1": "222-16-30",
+                "contact2": "224-75-10"
+            },
+            "fax": "224-72-45",
+            "email": "aiei_info@edu.uz",
+            "website": "http://www.andmii.uz"
+        },
+        {
+            "name": "Buxoro davlat universiteti",
+            "location": "Muhammad Ikbol ko'ch, 11, Buxara 105018",
+            "city": "Bukhara",
+            "phone": {
+                "main": "+998-365",
+                "contact1": "223-23-14",
+                "contact2": "223-12-19 /54"
+            },
+            "email": "ajuraev.bsu@gmail.com, ajuraev@mail.ru",
+            "website": "http://www.buxdu.uz/",
+            "registrationNumber": "936635784"
+        },
+        {
+            "name": "Buxoro muhandislik-texnologiya instituti",
+            "location": "К. Murtazayev ko'ch 15 Buxara, 705017",
+            "city": "Bukhara",
+            "phone": {
+                "main": "+998-365",
+                "contact1": "223-61-97",
+                "contact2": "223-79-72"
+            },
+            "email": "komil_wp@rambler.ru",
+            "website": "http://bti.uznet.net",
+            "registrationNumber": "934163739"
+        },
+        {
+            "name": "Guliston davlat universiteti",
+            "location": "4-chi massiv, Guliston, 707000",
+            "city": "Sirdarya",
+            "phone": {
+                "main": "+998-367",
+                "contact1": "225-02-75",
+                "contact2": "225-36-06"
+            },
+            "fax": "225-40-42",
+            "email": "glsu_info@edu.uz, azamat_shoimqulov@mail.ru",
+            "website": "www.guldu.uz"
+        },
+        {
+            "name": "Jizzax politexnika instituti",
+            "location": "Drujba Narodov ko'ch, Djizzak 130100",
+            "city": "Jizzak",
+            "phone": {
+                "main": "+998-372",
+                "contact1": "226-46-05",
+                "contact2": "226-45-47"
+            },
+            "email": "dgpi_info@edu.uz",
+            "website": "http://www.djizpi.uz"
+        },
+        {
+            "name": "Qoraqalpoq davlat universiteti",
+            "location": "Universitetskaya ko'ch, 1 Nukus 142012",
+            "city": "Karakalpakstan",
+            "phone": {
+                "main": "+998-361",
+                "contact1": "223-60-47",
+                "contact2": "223-60-78"
+            },
+            "email": "xab_kdu14@mail.ru",
+            "website": "http://www.karsu.uz/",
+            "registrationNumber": "933529650"
+        },
+        {
+            "name": "Qarshi davlat universiteti",
+            "location": "Kuchabog ko'ch. 17, Qarshi, 130003",
+            "city": "Kashkadarya",
+            "phone": {
+                "main": "+998-375",
+                "contact1": "225-34-13",
+                "contact2": "225-57-01"
+            },
+            "email": "azizovanasiba@mail.ru",
+            "website": "http://www.qarshidu.uz"
+        },
+        {
+            "name": "Qarshi muhandislik-iqtisodiyot instituti",
+            "location": "Mustakillik ko'ch, 225, Qarshi, 180100",
+            "city": "Kashkadarya",
+            "phone": {
+                "main": "+998-375",
+                "contact1": "224-13-95",
+                "contact2": "224-13-95"
+            },
+            "email": "alibek_8805@mail.ru",
+            "website": "http://www.qmii.uz/"
+        },
+        {
+            "name": "Namangan davlat universiteti",
+            "location": "Uychi ko'ch. 316, Namangan,116019",
+            "city": "Namangan",
+            "phone": {
+                "main": "+998-369",
+                "contact1": "227-01-44",
+                "contact2": "227-01-44"
+            },
+            "email": "pulathon2001@yahoo.com",
+            "website": "www.namsu.uz",
+            "registrationNumber": "934161314"
+        },
+        {
+            "name": "Namangan muhandislik-pedagogika instituti",
+            "location": "Dustlik ko'ch, 12 Namangan, 116003",
+            "city": "Namangan",
+            "phone": {
+                "main": "+998-369",
+                "contact1": "223 01 98",
+                "contact2": "234-15-23"
+            },
+            "fax": "224-48-17",
+            "email": "t_adham@rambler.ru",
+            "website": "http://www.nammpi.uz"
+        },
+        {
+            "name": "Namangan muhandislik-texnologik instituti",
+            "location": "Kosonsoy ko'ch, 7 Namangan,116030",
+            "city": "Namangan",
+            "phone": {
+                "main": "+998-369",
+                "contact1": "222-10-02",
+                "contact2": "232-53-27"
+            },
+            "email": "azizovshuhrat@gmail.com",
+            "website": "http://www.nammti.uz"
+        },
+        {
+            "name": "Samarqand davlat universiteti",
+            "location": "Navoi hiyoboni, 15 Samarqand 102004",
+            "city": "Samarkand",
+            "phone": "(+998-366) 235-16-02",
+            "fax": "235-19-38",
+            "email": "irossu@mail.ru",
+            "website": "http://www.samdu.uz",
+            "id": 948893189
+        },
+        {
+            "name": "Samarqand davlat chet tillari instituti",
+            "location": "Ohunboboyeva ko'ch 93, Samarqand, 703004",
+            "city": "Samarkand",
+            "phone": "(+998-366) 233-78-43",
+            "fax": "210-00-18",
+            "email": "intdep@inbox.ru",
+            "website": "http://www.samdchti.uz",
+            "id": 933978760
+        },
+        {
+            "name": "Samarqand iqtisodiyot va servis instituti",
+            "location": "A. Temur ko'ch, 9. Samarqand, 103000",
+            "city": "Samarkand",
+            "phone": "(+998-366) 233-38-72",
+            "fax": "231-12-53",
+            "email": "aslanova_d@rambler.ru",
+            "website": "http://www.sies.uz",
+            "id": null
+        },
+        {
+            "name": "Samarqand davlat arxitektura-qurilish instituti",
+            "location": "Lolazor ko'ch, 70 Samarqand105017",
+            "city": "Samarkand",
+            "phone": "(+998-366) 237-15-93",
+            "fax": "237-26-30",
+            "email": "abror_g@yahoo.com",
+            "website": "http://www.samgasi.uz/",
+            "id": null
+        },
+        {
+            "name": "Termez davlat universiteti",
+            "location": "F.Xodjaev ko'ch, 43, Termez 132011",
+            "city": "Termez",
+            "phone": "(+998-376) 222-87-16",
+            "fax": "223-19-18",
+            "email": "zulfikor76@mail.ru",
+            "website": "http://www.terdu.uz",
+            "id": null
+        },
+        {
+            "name": "Urgench davlat universiteti",
+            "location": "H.Olimjon ko'ch. 14, 140013",
+            "city": "Khorazm",
+            "phone": "(+998-362) 224-67-00",
+            "fax": "226-61-66",
+            "email": "ursubox@gmail.com",
+            "website": "http://www.urdu.uz/",
+            "id": 948151139
+        },
+        {
+            "name": "Farg'ona davlat universiteti",
+            "location": "Usmonhajaev, 19 Farg'ona 112000",
+            "city": "Farg'ona",
+            "phone": "(+998-373) 244-44-02",
+            "fax": "244-44-93",
+            "email": "frsu_info@edu.uz",
+            "website": "http://www.fdu.uz/",
+            "id": 934876592
+        },
+        {
+            "name": "Farg’ona politexnika insituti",
+            "location": "Farg'ona ko'ch, 86 Farg'ona 112028",
+            "city": "Farg'ona",
+            "phone": "(+998-373) 241-12-01",
+            "fax": "222-27-81",
+            "email": "jamol_qambarov@mail.ru",
+            "website": "http://www.ferpi.uz/",
+            "id": null
+        },
+        {
+            "name": "Jizzax davlat pedagogika instituti",
+            "location": "Nasirov ko'ch. 4, Jizzah, 108014",
+            "city": "Jizzax",
+            "phone": "(+998-372) 226-13-57",
+            "fax": "226-59-94",
+            "email": [
+                "dgspi_info@edu.uz",
+                "gulchehrad75@mail.ru"
+            ],
+            "website": "www.jspi.uz",
+            "id": null
+        },
+        {
+            "name": "Qo’qon davlat pedagogika instituti",
+            "location": "Istambul ko'ch 63, Qo'qon, 113000",
+            "city": "Farg'ona",
+            "phone": "(+998-373) 552-38-38",
+            "fax": "553-02-57",
+            "email": [
+                "Intellect_star@mail.ru"
+            ],
+            "website": "http://www.qdpi.uz/",
+            "id": 933459713
+        },
+        {
+            "name": "Nukus davlat pedagogika instituti",
+            "location": "Dusnazarova ko'ch, 104, Nukus 142000",
+            "city": "Qoraqalpogiston",
+            "phone": "(+998-361) 222-65-10",
+            "fax": "222-82-76",
+            "email": [
+                "nkspi_info@edu.uz"
+            ],
+            "website": "http://www.ndpi.uz/",
+            "id": null
+        },
+        {
+            "name": "Navoi davlat pedagogika instituti",
+            "location": "Ibn Sino ko'ch. 45, Navoi 106800",
+            "city": "Navoi",
+            "phone": "(+998-4362) 225-19-30",
+            "fax": "51-9-30/38",
+            "email": [
+                "nvsi_info@edu.uz"
+            ],
+            "website": "http://www.nspi.uz",
+            "id": null
+        },
+        {
+            "name": "Toshkent tibbiyot akademiyasi",
+            "location": "Farobiy ko'ch. 2 Toshkent, 100019",
+            "city": "Toshkent",
+            "phone": "(+998-71) 150-78-25",
+            "fax": "150-78-25",
+            "email": [
+                "2tmi_info@edu.uz",
+                "inter.dep@mail.ru"
+            ],
+            "website": "http://www.tma.uz/",
+            "id": 933759928
+        },
+        {
+            "name": "Toshkent tibbiyot akademiyasi (Urganchdagi filiali)",
+            "location": "Al-Khorazmiy ko'ch, 25 Urgench, 220100",
+            "city": "Khorazm",
+            "phone": "(+998-362) 223-13-55",
+            "fax": "226 15 44/11 98",
+            "email": [
+                "urganchmed@mail.ru",
+                "futma_info@edu.uz"
+            ],
+            "website": "http://www.urgfiltma.uz",
+            "id": null
+        },
+        {
+            "name": "Toshkent tibbiyot akademiyasi (Farg’onadagi filiali)",
+            "location": "Dadkhoh ko'ch 2, Farg'ona",
+            "city": "Farg'ona",
+            "phone": "(+998-373) 243 06 62",
+            "fax": "224 61 95",
+            "email": [
+                "fftma_info@edu.uz"
+            ],
+            "website": "www.tmaff.reinfo.uz",
+            "id": null
+        },
+        {
+            "name": "Toshkent pediatriya tibbiyot instituti",
+            "location": "J. Obidova ko'ch, 223, Toshkent 100140",
+            "city": "Toshkent",
+            "phone": "(+998-71) 262 28 71",
+            "fax": "262-33-14",
+            "email": [
+                "tpmi_info@edu.uz",
+                "tashpmi@rambler.ru"
+            ],
+            "website": "www.tashpmi.uz",
+            "id": 945797531
+        },
+        {
+            "name": "Toshkent pediatriya tibbiyot instituti (Nukusdagi filiali)",
+            "location": "Kurbanov ko'ch, 223, Nukus,742000",
+            "city": "Qoraqalpogiston",
+            "phone": "(+998-361) 223-66-16",
+            "fax": "223 63 85",
+            "email": [
+                "nukusmed@mail.ru"
+            ],
+            "website": "www.nmed.kr.uz",
+            "id": 933685626
+        },
+        {
+            "name": "Toshkent farmatsevtika instituti",
+            "location": "Oybek ko'ch, 45, Toshkent, 100015",
+            "city": "Toshkent",
+            "phone": "(+998-71) 253-37-38",
+            "fax": "252-67-62",
+            "email": [
+                "tfri_info@edu.uz"
+            ],
+            "website": "http://pharmi.uz/",
+            "id": null
+        },
+        {
+            "name": "Toshkent davlat stomatologiya instituti",
+            "location": "Faroniy ko`ch, 2 Toshkent, 100019",
+            "city": "Toshkent",
+            "phone": "(+998-71) 230-47-99",
+            "fax": "230-47-99",
+            "email": [
+                "baxtinur@bk.ru"
+            ],
+            "website": "http://www.tsdi.uz",
+            "id": null
+        },
+        {
+            "name": "Toshkent davlat stomatologiya instituti (Buxoro filiali)",
+            "location": "Navoiy ko`ch, 1, 200118",
+            "city": "Buxoro",
+            "phone": "(+998 65) 223-10-48",
+            "fax": "223-10-49",
+            "email": [
+                "dr.inoyatov@mail.ru"
+            ],
+            "website": "http://www.tdsibf.uz",
+            "id": null
+        },
+        {
+            "name": "Toshkent davlat stomatologiya instituti (Samarqand filiali)",
+            "location": "Ho`ja Axror Vali ko`ch, 21",
+            "city": "Samarqand",
+            "phone": "(+998 66) 235-20-80",
+            "fax": "235-20-80",
+            "email": [
+                "tdsisf_direktor@edu.uz"
+            ],
+            "website": "http://www.tdsisf.uz",
+            "id": null
+        },
+        {
+            "name": "Toshkent davlat stomatologiya instituti (Nukus filiali)",
+            "location": "Ch.Abdirov ko`ch, 2",
+            "city": "Nukus",
+            "phone": "(+998 61) 226-15-11",
+            "fax": "226-15-11",
+            "email": [
+                "stomnukus@umail.uz"
+            ],
+            "website": "http://www.tsdinf.uz",
+            "id": null
+        },
+        {
+            "name": "Toshkent davlat stomatologiya instituti (Andijon filiali)",
+            "location": "Yu.Atabekov ko'ch 1, 170127",
+            "city": "Andijan",
+            "phone": "(+998 74) 237-50-82",
+            "fax": "237-50-82",
+            "email": [
+                "stomand@umail.uz",
+                "tulanov_dilshodbek@mail.ru"
+            ],
+            "website": "http://www.tdsiaf.uz",
+            "id": null
+        },
+        {
+            "name": "Andijon davlat tibbiyot instituti",
+            "location": "Navoi ko'ch, 124, Andijon, 110015",
+            "city": "Andijon",
+            "phone": "(+998-374) 2371141",
+            "fax": "237-54-33 256-45-04",
+            "email": [
+                "asmi-and@rambler.ru"
+            ],
+            "website": "http://www.adti.uz/",
+            "id": null
+        },
+        {
+            "name": "Buxoro davlat tibbiyot instituti",
+            "location": "Navoi ko'ch, 1, Buxoro, 105018",
+            "city": "Buxoro",
+            "phone": "(+998-365) 223-00-50",
+            "fax": "223-49-43",
+            "email": [
+                "bumi_info@edu.uz"
+            ],
+            "website": "http://avicenna-med.uz/",
+            "id": 933000030
+        },
+        {
+            "name": "Samarqand davlat tibbiyot instituti",
+            "location": "A. Timur ko'ch, 18 Samarqand 140100",
+            "city": "Samarqand",
+            "phone": "(+998-366) 233-07-66",
+            "fax": "233-71-75",
+            "email": [
+                "sammi.xabb@mail.ru"
+            ],
+            "website": "http://www.sammi.uz",
+            "id": null
+        },
+        {
+            "name": "Toshkent irrigatsiya va melioratciya instituti",
+            "location": "K. Niyozova ko'ch, 39, Tashkent 10000",
+            "city": "Toshkent",
+            "phone": "(+998-71) 237 46 68",
+            "fax": "237-09-45",
+            "email": [
+                "maman1990@mail.ru"
+            ],
+            "website": "http://tiim.uz/",
+            "id": null
+        },
+        {
+            "name": "Toshkent irrigatsiya va melioratciya instituti (Buxorodagi filiali)",
+            "location": "Gazli shox ko'ch. 32, Buxoro 105009",
+            "city": "Buxoro",
+            "phone": "(+998-365) 225-19-08",
+            "fax": "225-19-08",
+            "email": [
+                "rmusurmanov@umail.uz"
+            ],
+            "website": "http://tiimbf.uz/",
+            "id": null
+        },
+        {
+            "name": "Toshkent davlat agrar universiteti",
+            "location": "Universitetskaya ko'ch, 2 Toshkent viloyati, 100140",
+            "city": "Toshkent",
+            "phone": "(+998-71) 260-48-00",
+            "fax": "260-48-67",
+            "email": [
+                "adilovs@hotmail.com"
+            ],
+            "website": "http://www.agrar.uz",
+            "id": null
+        },
+        {
+            "name": "Toshkent davlat agrar universiteti (Nukusdagi filiali)",
+            "location": "Avdanberdi ko'ch, Nukus 742009",
+            "city": "Qoraqalpog'iston",
+            "phone": "(+998-361) 229-27-01",
+            "fax": "229 25 09",
+            "email": [
+                "nukusbtsau@mail.ru"
+            ],
+            "website": "http://www.tdaunukus.uz",
+            "id": null
+        },
+        {
+            "name": "Andijon qishloq xo’jaligi instituti",
+            "location": "Andijon viloyati, Kuyganyar 111529",
+            "city": "Andijon",
+            "phone": "(+998-374) 223-90-69",
+            "fax": "373-13-63",
+            "email": [
+                "a_rasul@mail.ru"
+            ],
+            "website": "http://andqxi.uz/uz/",
+            "id": null
+        },
+        {
+            "name": "Samarqand qishloq xo’jaligi instituti",
+            "location": "M.Ulugbek ko'ch, 77, Samarqand 103003",
+            "city": "Samarqand",
+            "phone": "(+998-366) 234-33-20",
+            "fax": "234-07-86",
+            "email": [
+                "sammi.xabb@mail.ru",
+                "shavkat_hasanov@hotmail.com"
+            ],
+            "website": "http://www.samqxi.uz",
+            "id": 934487913
+        },
+        {
+            "name": "Toshkent axborot texnologiyalari universiteti",
+            "location": "A. Timur ko'ch, 108, Toshkent 100084",
+            "city": "Toshkent",
+            "phone": "(+998-71) 235-09-34",
+            "fax": "235-10-40",
+            "email": [
+                "a.radjiev@tuit.uz"
+            ],
+            "website": "http://tuit.uz",
+            "id": 933893109
+        },
+        {
+            "name": "Toshkent axborot texnologiyalari universiteti (Samarqanddagi filiali)",
+            "location": "Amir Temur ko'ch, 9, Samarqand 703000",
+            "city": "Samarqand",
+            "phone": "(+998-366) 233-15-40",
+            "fax": "233-15-40",
+            "email": [
+                "sf_tuit@mail.ru"
+            ],
+            "website": "http://www.samtuit.uz/",
+            "id": null
+        },
+        {
+            "name": "Toshkent axborot texnologiyalari universiteti (Qarshidagi filiali)",
+            "location": "Beshkent yuli, Qarshi, 180101",
+            "city": "Qashqadaryo",
+            "phone": "(+998-375) 221-05-13",
+            "fax": "228-02-32",
+            "email": [
+                "odilt@mail.ru",
+                "f.rahmatov@tuitkf.uz"
+            ],
+            "website": "http://tuitkf.uz/",
+            "id": 933657205
+        },
+        {
+            "name": "Toshkent axborot texnologiyalari universiteti (Urganchdagi filiali)",
+            "location": "Anna German ko'ch, 18 Urganch, 220100",
+            "city": "Horazm",
+            "phone": "(+998-362) 224-61-32",
+            "fax": "224-10-98",
+            "email": [
+                "tatuufdevonxona@inbox.uz"
+            ],
+            "website": "http://www.ubtuit.uz",
+            "id": null
+        },
+        {
+            "name": "Toshkent axborot texnologiyalari universiteti (Nukusdagi filiali)",
+            "location": "Sharaf Rashidov ko'ch, 26 Nukus, 742012",
+            "city": "Qoraqalpog'iston",
+            "phone": "(+998-361) 223-60-19",
+            "fax": "222-49-10",
+            "email": [
+                "kbatyrbek@umail.uz",
+                "tatunf@rambler.ru"
+            ],
+            "website": "http://tatunf.uz/",
+            "id": null
+        },
+        {
+            "name": "Toshkent axborot texnologiyalari universiteti (Farg’onadagi filiali)",
+            "location": "Farg'ona ko'ch, 86A Farg'ona, 712018",
+            "city": "Farg'ona",
+            "phone": "(+998-373) 226-82-09",
+            "fax": "224-41-48",
+            "email": [
+                "bmirzakarimov@umail.uz",
+                "tatuff_direktor@edu.uz"
+            ],
+            "website": "www.tuitff.uz",
+            "id": null
+        },
+        {
+            "name": "Toshkent Islom Universiteti",
+            "location": "Abdulla Kodiriy ko'ch, 11 Toshkent, 100011",
+            "city": "Toshkent",
+            "phone": "(+998-71) 244-00-65",
+            "fax": "244-00-65",
+            "email": [
+                "tiuxab@mail.ru",
+                "khasanovkh@umail.uz"
+            ],
+            "website": "http://www.tiu.uz",
+            "id": null
+        },
+        {
+            "name": "Toshkent davlat o`zbek tili va adabiyoti universiteti",
+            "location": "Yakkasaroy tumani, 103 Toshkent",
+            "city": "Toshkent",
+            "phone": "(+998-71) 246-63-58",
+            "fax": null,
+            "email": [
+                "tdutau_rector@edu.uz"
+            ],
+            "website": null,
+            "id": null
+        },
+        {
+            "name": "Jahon iqtisodiyoti va diplomatiya universiteti",
+            "location": "Buyuk Ipak yuli ko'ch, 54 Toshkent, 100137",
+            "city": "Toshkent",
+            "phone": "(+998-71) 267-07-50, 360-93-09",
+            "fax": "360-09-00",
+            "email": [
+                "iduwed@mail.ru"
+            ],
+            "website": "http://www.uwed.uz/",
+            "id": 924550748
+        },
+        {
+            "name": "O’zbekiston davlat konservatoriyasi",
+            "location": "Abay ko'ch, 1 Toshkent, 100000",
+            "city": "Toshkent",
+            "phone": "(+998-71) 244-53-20",
+            "fax": "233-67-70",
+            "email": [
+                "uzkonservatory@mail.ru",
+                "elnora_m0808@mail.ru"
+            ],
+            "website": "www.scu.uz",
+            "id": null
+        },
+        {
+            "name": "O'zbekiston davlat san'at va madaniyat instituti",
+            "location": "Mironshox ko'ch., 123, Toshkent",
+            "city": "Toshkent",
+            "phone": "(+998-71) 281-50-26   281-50-29",
+            "fax": "255-88-06",
+            "email": [
+                "dsmi@olam.uz"
+            ],
+            "website": "http://www.dsmi.uz",
+            "id": null
+        },
+        {
+            "name": "Milliy raqs va xoreografiya Oliy Maktabi",
+            "location": "Yusuf Hos Hojib, 31, Toshkent 100000",
+            "city": "Toshkent",
+            "phone": "(+998-71) 256-24-36 256-37-06 256-33-27",
+            "fax": "256-24-27",
+            "email": [
+                "hsnd_info@edu.uz"
+            ],
+            "website": null,
+            "id": "KUCHKAROV Mannob"
+        },
+        {
+            "name": "O'zbek davlat jismoniy tarbiya instituti",
+            "location": "Akkurgan ko'ch, 2 Toshkent 100052",
+            "city": "Toshkent",
+            "phone": "(+998-71) 268-08-58",
+            "fax": "268-08-98",
+            "email": [
+                "usif_info@edu.uz"
+            ],
+            "website": "http://www.uzdjti.uz/",
+            "id": 933851302
+        },
+        {
+            "name": "Toshkent davlat san’at instituti (Nukusdagi filiali)",
+            "location": "Nukus",
+            "city": "Nukus",
+            "phone": "(998-61) 224-14-10",
+            "fax": "222-46-12",
+            "email": [
+                "fart_info@edu.uz"
+            ],
+            "website": "http://www.uzdsmi-nf.uz",
+            "id": null
+        },
+        {
+            "name": "Milliy rassomchilik va dizayn instituti",
+            "location": "Sadik Azimov ko'ch., 35, Toshkent 700000",
+            "city": "Toshkent",
+            "phone": "(+998-71) 232-18-10",
+            "fax": "232-17-61",
+            "email": [
+                "mrdi_info@edu.uz"
+            ],
+            "website": "http://www.mrdi.uz/",
+            "id": null
+        },
+        {
+            "name": "Toshkent davlat yuridik universiteti",
+            "location": "Saylegoh ko'ch, 35, Toshkent 100047",
+            "city": "Toshkent",
+            "phone": "(+998-71) 233-41-09",
+            "fax": "233-47-50",
+            "email": [
+                "tsli_info@edu.uz"
+            ],
+            "website": "http://www.tsul.uz/",
+            "id": null
+        },
+        {
+            "name": "Toshkent temir yo’l transporti muhandislari instituti",
+            "location": "Odilhujayev ko'ch, 1 Toshkent 100045",
+            "city": "Toshkent",
+            "phone": "(+998-71) 291-14-40",
+            "fax": "299-05-04",
+            "email": [
+                "xab@tashiit.uz"
+            ],
+            "website": "http://www.tashiit.uz",
+            "id": null
+        },
+        {
+            "name": "Navoi davlat konchillik instituti",
+            "location": "Janubiy ko'ch, 27a Navoi, 110100",
+            "city": "Navoi",
+            "phone": "(+998-4362) 24-90-21",
+            "fax": "2 238 230",
+            "email": [
+                "nvmi_info@edu.uz"
+            ],
+            "website": "http://nggi.uz/",
+            "id": null
+        },
+        {
+            "name": "Soliq akademiyasi",
+            "location": "Kichik Halka yuli ko'ch, 3 Toshkent, 100173",
+            "city": "Toshkent",
+            "phone": "(+998-71) 275-74-36",
+            "fax": "217 48 09",
+            "email": [
+                "taxacad@mail.ru"
+            ],
+            "website": "http://www.akademiya.uz",
+            "id": null
+        },
+        {
+            "name": "Toshkent Halqaro Westminster universiteti",
+            "location": "Akhunbabaev ko'ch, 12 Toshkent, 100000",
+            "city": "Toshkent",
+            "phone": "(+998-71) 238-74-00 238-74-44",
+            "fax": "236-35-99 238-74-02",
+            "email": [
+                "advice@wiut.uz"
+            ],
+            "website": "http://www.westminster.uz/",
+            "id": "933536828"
+        },
+        {
+            "name": "Moskva davlat universitetining Toshkentdagi filiali",
+            "location": "A.Temur main str., 22, 100060",
+            "city": "Toshkent",
+            "phone": "(+998-71) 232 28 22",
+            "fax": "232 28 11 232 13 03",
+            "email": [
+                "e.saidamatov@msu.uz"
+            ],
+            "website": "www.msu.uz",
+            "id": null
+        },
+        {
+            "name": "Gubkin nomidagi Rossiya neft va gaz universitetining Toshkentdagi filiali",
+            "location": "Dorman yuli ko'ch, 34 Toshkent, 100125",
+            "city": "Toshkent",
+            "phone": "(+998-71) 269-96-60",
+            "fax": "269 96 60",
+            "email": [
+                "info@gubkin.uz",
+                "priemnaya@gubkin.uz"
+            ],
+            "website": "www.gubkin.uz",
+            "id": null
+        },
+        {
+            "name": "G.V.Plexanov nomidagi Rosiiya iqtisodiyot universitetining Toshkentdagi filiali",
+            "location": "Uzbekistan ko'ch, 49 Toshkent, 100003",
+            "city": "Toshkent",
+            "phone": "(+998-71) 232-60-23",
+            "fax": "232 60 22",
+            "email": [
+                "info@rea.uz",
+                "director@rea.uz"
+            ],
+            "website": "www.rea.uz",
+            "id": null
+        },
+        {
+            "name": "Singapur menedjmentni rivojlantirish institutining Toshkentdagi filiali",
+            "location": "Bunyodkor ko'ch, 28 Toshkent, 100185",
+            "city": "Toshkent",
+            "phone": "(+998-71) 271-77-00",
+            "fax": "276-90-94",
+            "email": [
+                "marketing@mdis.uz"
+            ],
+            "website": "http://www.mdis.uz/",
+            "id": null
+        },
+        {
+            "name": "Turin politexnika universiteti Toshkentdagi filiali",
+            "location": "Niyazov (Malaya Kolcevaya) ko'ch. 17, Toshkent",
+            "city": "Toshkent",
+            "phone": "(+998-71) 246-70-82",
+            "fax": null,
+            "email": [
+                "f.niyazov@polito.uz"
+            ],
+            "website": "http://www.polito.uz/",
+            "id": "934160829"
+        },
+        {
+            "name": "Inha universiteti Toshkentdagi filiali",
+            "location": "Ziyolilar ko`ch, 9 Mirozo Ulugbek tum.Toshkent",
+            "city": "Toshkent",
+            "phone": "(+998-71) 269-00-58 269-14-18",
+            "fax": null,
+            "email": [
+                "m.shagazatov@inha.uz"
+            ],
+            "website": "www.inha.uz",
+            "id": null
+        }
+    ]
+}

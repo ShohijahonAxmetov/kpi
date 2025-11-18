@@ -1,0 +1,119 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Dictionaries\AcademicDegree;
+use App\Models\Lang;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+
+class AcademicDegreeController extends Controller
+{
+    public $title = 'Ilmiy darajalar';
+    public $route_name = 'academic_degrees';
+    public $route_parameter = 'academic_degree';
+
+    public function index()
+    {
+        ${$this->route_name} = AcademicDegree::latest()
+            ->paginate(12);
+        $languages = Lang::all();
+
+        return view('app.'.$this->route_name.'.index', [
+            'title' => $this->title,
+            'route_name' => $this->route_name,
+            'route_parameter' => $this->route_parameter,
+            $this->route_name => ${$this->route_name},
+            'languages' => $languages
+        ]);
+    }
+
+    public function create()
+    {
+        return view('app.'.$this->route_name.'.create', [
+            'title' => $this->title,
+            'route_name' => $this->route_name,
+            'route_parameter' => $this->route_parameter,
+            'langs' => Lang::all()
+        ]);
+    }
+
+    public function store(Request $request)
+    {
+        $data = $request->all();
+
+        $validator = Validator::make($data, [
+            'name' => 'required',
+            'code' => 'required',
+        ]);
+        if ($validator->fails()) {
+            return back()->withInput()->with([
+                'success' => false,
+                'message' => 'Ma\'lumotlar notog\'ri kiritildi'
+            ]);
+        }
+
+        AcademicDegree::create($data);
+
+        return redirect()->route($this->route_name.'.index')->with([
+            'success' => true,
+            'message' => 'Muvaffaqiyatli saqlandi'
+        ]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Dictionaries\AcademicDegree  $academicDegree
+     * @return \Illuminate\Http\Response
+     */
+    public function show(AcademicDegree $academicDegree)
+    {
+        //
+    }
+
+    public function edit(AcademicDegree $academicDegree)
+    {
+        return view('app.'.$this->route_name.'.edit', [
+            'title' => $this->title,
+            'route_name' => $this->route_name,
+            'route_parameter' => $this->route_parameter,
+            'langs' => Lang::all(),
+            $this->route_parameter => ${Str::camel($this->route_parameter)}
+        ]);
+    }
+
+    public function update(Request $request, AcademicDegree $academicDegree)
+    {
+        $data = $request->all();
+
+        $validator = Validator::make($data, [
+            'name' => 'required',
+            'code' => 'required'
+        ]);
+        if ($validator->fails()) {
+            return back()->withInput()->with([
+                'success' => false,
+                'message' => 'Ma\'lumotlar notog\'ri kiritildi'
+            ]);
+        }
+
+        ${Str::camel($this->route_parameter)}->update($data);
+
+        return redirect()->route($this->route_name.'.index')->with([
+            'success' => true,
+            'message' => 'Muvaffaqiyatli saqlandi'
+        ]);
+    }
+
+    public function destroy(AcademicDegree $academicDegree)
+    {
+        ${Str::camel($this->route_parameter)}->delete();
+
+        return back()->with([
+            'success' => true,
+            'message' => 'Muvaffaqiyatli o\'chirildi'
+        ]);
+    }
+}
