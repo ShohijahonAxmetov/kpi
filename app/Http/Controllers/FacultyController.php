@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Validator;
 use App\Models\Faculty;
 use App\Models\University;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class FacultyController extends Controller
@@ -12,11 +13,7 @@ class FacultyController extends Controller
     public $title = 'Факультеты';
     public $route_name = 'faculties';
     public $route_parameter = 'faculty';
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
         $universities = University::orderBy('title');
@@ -45,11 +42,6 @@ class FacultyController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         $universities = University::orderBy('title');
@@ -68,24 +60,19 @@ class FacultyController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
     public function store(Request $request)
     {
         $data = $request->all();
 
         $validator = Validator::make($data, [
             'title' => 'required',
-            'university_id' => 'required|integer'
+            'university_id' => 'required|integer',
+            'code' => 'required'
         ]);
         if ($validator->fails()) {
             return back()->withInput()->with([
                 'success' => false,
-                'message' => 'Ошибка валидации'
+                'message' => 'Ma\'lumotlar notog\'ri kiritildi'
             ]);
         }
 
@@ -97,27 +84,15 @@ class FacultyController extends Controller
 
         return redirect()->route($this->route_name . '.index')->with([
             'success' => true,
-            'message' => 'Успешно сохранен'
+            'message' => 'Muvaffaqiyatli saqlandi'
         ]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Faculty  $faculty
-     * @return \Illuminate\Http\Response
-     */
     public function show(Faculty $faculty)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Faculty  $faculty
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Faculty $faculty)
     {
         $universities = University::orderBy('title');
@@ -138,13 +113,6 @@ class FacultyController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Faculty  $faculty
-     * @return \Illuminate\Http\RedirectResponse
-     */
     public function update(Request $request, Faculty $faculty)
     {
         $data = $request->all();
@@ -172,14 +140,13 @@ class FacultyController extends Controller
         ]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Faculty  $faculty
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Faculty $faculty)
     {
-        //
+        ${Str::camel($this->route_parameter)}->delete();
+
+        return back()->with([
+            'success' => true,
+            'message' => 'Muvaffaqiyatli o\'chirildi'
+        ]);
     }
 }

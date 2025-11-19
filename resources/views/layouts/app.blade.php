@@ -178,7 +178,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link {{ request()->is('admin/directions') || request()->is('admin/directions/*') ? 'active' : '' }}" href="{{ route('directions.index') }}">
-                                        Yo'nalishlar
+                                        Kafedralar va yo'nalishlar
                                     </a>
                                 </li>
                             </ul>
@@ -246,6 +246,38 @@
                                     <li class="nav-item">
                                         <a class="nav-link {{ request()->is('admin/certificate_points') || request()->is('admin/certificate_points/*') ? 'active' : '' }}" href="{{ route('certificate_points.index') }}">
                                             Chet tili sertifikati darajalari
+                                        </a>
+                                    </li>
+                                @endif
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#criterions" data-bs-toggle="collapse" role="button" aria-expanded="{{ request()->is('admin/criterion_main_categories') || request()->is('admin/criterion_main_categories/*') || request()->is('admin/criterion_categories') || request()->is('admin/criterion_categories/*') || request()->is('admin/criterions') || request()->is('admin/criterions/*') || request()->is('admin/criterion_items') || request()->is('admin/criterion_items/*') ? 'true' : 'false' }}" aria-controls="documents">
+                            <i class="fe fe-book"></i> Baholash mezonlari
+                        </a>
+                        <div class="collapse {{ request()->is('admin/criterion_main_categories') || request()->is('admin/criterion_main_categories/*') || request()->is('admin/criterion_categories') || request()->is('admin/criterion_categories/*') || request()->is('admin/criterions') || request()->is('admin/criterions/*') || request()->is('admin/criterion_items') || request()->is('admin/criterion_items/*') ? 'show' : '' }}" id="criterions">
+                            <ul class="nav nav-sm flex-column">
+                                @if(auth()->user()->role == 'admin')
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->is('admin/criterion_main_categories') || request()->is('admin/criterion_main_categories/*') ? 'active' : '' }}" href="{{ route('criterion_main_categories.index') }}">
+                                            Bo'limlar
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->is('admin/criterion_categories') || request()->is('admin/criterion_categories/*') ? 'active' : '' }}" href="{{ route('criterion_categories.index') }}">
+                                            Ichki bo‘limlar
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->is('admin/criterions') || request()->is('admin/criterions/*') ? 'active' : '' }}" href="{{ route('criterions.index') }}">
+                                            Mezonlar
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->is('admin/criterion_items') || request()->is('admin/criterion_items/*') ? 'active' : '' }}" href="{{ route('criterion_items.index') }}">
+                                            Mezonlar bandlari
                                         </a>
                                     </li>
                                 @endif

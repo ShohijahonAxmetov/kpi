@@ -30,3 +30,6 @@ dlya ostalnix
 5. importirovat studenti s faylov /init_data/students/*
 6. php artisan db:seed --class=CertificateLanguageSeeder
 7. php artisan db:seed --class=CertificatePointSeeder
+
+# dorabotki
+1. admin userlarning parolini reset qilish funkciyasi

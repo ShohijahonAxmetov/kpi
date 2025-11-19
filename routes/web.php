@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\CriterionItemController;
+use App\Http\Controllers\CriterionController;
+use App\Http\Controllers\CriterionCategoryController;
+use App\Http\Controllers\CriterionMainCategoryController;
 use App\Http\Controllers\AcademicTitleController;
 use App\Http\Controllers\AcademicDegreeController;
 use App\Http\Controllers\RankController;
@@ -35,6 +39,10 @@ Route::middleware(['auth'])
         Route::resource('academic_degrees', AcademicDegreeController::class);
         // ranks
         Route::resource('ranks', RankController::class);
+        Route::resource('criterion_main_categories', CriterionMainCategoryController::class);
+        Route::resource('criterion_categories', CriterionCategoryController::class);
+        Route::resource('criterions', CriterionController::class);
+        Route::resource('criterion_items', CriterionItemController::class);
 
         // students
         Route::get('students/import', [StudentController::class, 'import_form'])->name('students.import_form');

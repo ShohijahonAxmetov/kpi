@@ -60,6 +60,7 @@
                                     </span>
                                     @enderror
                                 </div>
+
                                 <div class="form-group">
                                     <label for="title" class="form-label required">Название</label>
                                     <input type="text" required class="form-control @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" id="title" placeholder="Название...">
@@ -69,6 +70,17 @@
                                     </span>
                                     @enderror
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="code" class="form-label required">Код</label>
+                                    <input type="text" required class="form-control @error('code') is-invalid @enderror" name="code" value="{{ old('code') }}" id="code" placeholder="Код...">
+                                    @error('code')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+
                             </div>
                         </div>
                         <!-- Button -->

@@ -2,22 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Validator;
 use App\Models\Direction;
 use App\Models\University;
 use App\Models\Faculty;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class DirectionController extends Controller
 {
-    public $title = 'Направлении';
+    public $title = 'Kafedralar va yo\'nalishlar';
     public $route_name = 'directions';
     public $route_parameter = 'direction';
-    /**
-     * Display a listing of the resource.
-     *
-     * @return array|\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
-     */
+
     public function index()
     {
         $universities = University::orderBy('title');
@@ -56,11 +53,6 @@ class DirectionController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return array|\Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
-     */
     public function create()
     {
         $universities = University::orderBy('title');
@@ -83,12 +75,6 @@ class DirectionController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $data = $request->all();
@@ -119,23 +105,11 @@ class DirectionController extends Controller
         ]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Direction  $direction
-     * @return \Illuminate\Http\Response
-     */
     public function show(Direction $direction)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Direction  $direction
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Direction $direction)
     {
         $universities = University::orderBy('title');
@@ -160,13 +134,6 @@ class DirectionController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Direction  $direction
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Direction $direction)
     {
         $data = $request->all();
@@ -196,14 +163,13 @@ class DirectionController extends Controller
         ]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Direction  $direction
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Direction $direction)
     {
-        //
+        ${Str::camel($this->route_parameter)}->delete();
+
+        return back()->with([
+            'success' => true,
+            'message' => 'Muvaffaqiyatli o\'chirildi'
+        ]);
     }
 }

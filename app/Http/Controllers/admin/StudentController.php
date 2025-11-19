@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Dictionaries\AcademicDegree;
+use App\Models\Dictionaries\AcademicTitle;
+use App\Models\Dictionaries\Rank;
 use App\Models\Direction;
 use App\Models\Faculty;
 use App\Models\Student;
@@ -87,6 +90,9 @@ class StudentController extends Controller
             'universities' => $universities,
             'faculties' => $faculties,
             'directions' => $directions,
+            'ranks' => Rank::where('is_active', 1)->get(),
+            'academicDegrees' => AcademicDegree::where('is_active', 1)->get(),
+            'academicTitles' => AcademicTitle::where('is_active', 1)->get(),
         ]);
     }
 
@@ -100,17 +106,16 @@ class StudentController extends Controller
             'university_id' => 'required|integer',
             'faculty_id' => 'required|integer',
             'direction_id' => 'required|integer',
-            'passport_number' => 'required|max:9|min:9|unique:students',
-            // 'student_passport_number' => 'required|max:255'
+            'passport_number' => 'required|max:32|min:8|unique:students',
         ]);
         if ($validator->fails()) {
             return back()->withInput()->with([
                 'success' => false,
-                'message' => 'Ошибка валидации'
+                'message' => 'Ma\'lumotlar notog\'ri kiritildi'
             ]);
         }
 
-        $data['password'] = Hash::make(trim($data['student_passport_number']));
+        $data['password'] = Hash::make('123');
 
         if (!is_null(auth()->user()->university_id)) {
             if ($data['university_id'] != auth()->user()->university_id) abort(403);
@@ -122,7 +127,7 @@ class StudentController extends Controller
 
         return redirect()->route($this->route_name . '.index')->with([
             'success' => true,
-            'message' => 'Успешно сохранен'
+            'message' => 'Muvaffaqiyatli saqlandi'
         ]);
     }
 
@@ -157,7 +162,10 @@ class StudentController extends Controller
             'universities' => $universities,
             'faculties' => $faculties,
             'directions' => $directions,
-            'student' => $student
+            'student' => $student,
+            'ranks' => Rank::where('is_active', 1)->get(),
+            'academicDegrees' => AcademicDegree::where('is_active', 1)->get(),
+            'academicTitles' => AcademicTitle::where('is_active', 1)->get(),
         ]);
     }
 
@@ -171,17 +179,16 @@ class StudentController extends Controller
             'university_id' => 'required|integer',
             'faculty_id' => 'required|integer',
             'direction_id' => 'required|integer',
-            'passport_number' => 'required|max:9|min:9|unique:students,passport_number,' . $student->id,
-            // 'student_passport_number' => 'required|max:255'
+            'passport_number' => 'required|max:32|min:8|unique:students,passport_number,' . $student->id,
         ]);
         if ($validator->fails()) {
             return back()->withInput()->with([
                 'success' => false,
-                'message' => 'Ошибка валидации'
+                'message' => 'Ma\'lumotlar notog\'ri kiritildi'
             ]);
         }
 
-        $data['password'] = Hash::make($data['passport_number']);
+        $data['password'] = Hash::make(123);
 
         if (!is_null(auth()->user()->university_id)) {
             if ($student->university_id != auth()->user()->university_id) abort(403);
@@ -193,7 +200,7 @@ class StudentController extends Controller
 
         return redirect()->route($this->route_name . '.index')->with([
             'success' => true,
-            'message' => 'Успешно сохранен'
+            'message' => 'Muvaffaqiyatli saqlandi'
         ]);
     }
 

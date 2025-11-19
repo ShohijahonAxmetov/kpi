@@ -17,13 +17,13 @@
 
                 </div>
                 <div class="col-auto">
-                    <a href="{{ route($route_name.'.import_form') }}" class="btn btn-primary lift">
+                    <!-- <a href="{{ route($route_name.'.import_form') }}" class="btn btn-primary lift">
                         Импортировать
-                    </a>
+                    </a> -->
 
                     <!-- Button -->
                     <a href="{{ route($route_name.'.create') }}" class="btn btn-primary lift">
-                        Добавить
+                        Ma'lumot qo'shish
                     </a>
 
                 </div>
@@ -46,13 +46,13 @@
 <div class="container-fluid">
     <div class="card mt-4">
         <div class="card-header">
-            <h3 class="mb-0">Фильтр</h3>
+            <h3 class="mb-0">Filtr</h3>
         </div>
         <div class="card-body">
             <form action="{{ route($route_name.'.index') }}" method="get" class="d-flex justify-content-end w-100">
                 <div class="form-group mb-0 w-100">
                     <select class="form-control @error('university_id') is-invalid @enderror" data-choices name="university_id" id="university_input">
-                        <option value="">Университет</option>
+                        <option value="">Universitet</option>
                         @foreach ($universities as $key => $item)
                         <option value="{{ $item->id }}" {{ $filter_university == $item->id ? 'selected' : '' }}>{{ $item->title }}</option>
                         @endforeach
@@ -65,7 +65,7 @@
                 </div>
                 <div class="form-group mb-0 w-100 ms-3">
                     <select class="form-control @error('faculty_id') is-invalid @enderror" name="faculty_id" id="faculty_input">
-                        <option value="">Факультет</option>
+                        <option value="">Fakultet</option>
                         @foreach ($faculties as $key => $item)
                         <option data-parent="{{ $item->university_id }}" value="{{ $item->id }}" {{ $filter_faculty == $item->id ? 'selected' : '' }}>{{ $item->title }}</option>
                         @endforeach
@@ -78,7 +78,7 @@
                 </div>
                 <div class="form-group mb-0 w-100 ms-3">
                     <select class="form-control @error('direction_id') is-invalid @enderror" name="direction_id" id="direction_input">
-                        <option value="">Направлении</option>
+                        <option value="">Kafedra/Yo'nalish</option>
                         @foreach ($directions as $key => $item)
                         <option data-parent="{{ $item->faculty_id }}" value="{{ $item->id }}" {{ $filter_direction == $item->id ? 'selected' : '' }}>{{ $item->title }}</option>
                         @endforeach
@@ -89,7 +89,7 @@
                     </span>
                     @enderror
                 </div>
-                <button type="submit" class="btn btn-success ms-3">Поиск</button>
+                <button type="submit" class="btn btn-success ms-3">Qidirish</button>
             </form>
         </div>
     </div>
@@ -101,10 +101,10 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Ф.И.О</th>
-                            <th scope="col">Университет</th>
-                            <th scope="col">Факультет</th>
-                            <th scope="col">Общий балл</th>
+                            <th scope="col">F.I.Sh</th>
+                            <th scope="col">Universitet</th>
+                            <th scope="col">Fakultet</th>
+                            <th scope="col">Umumiy ball</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
