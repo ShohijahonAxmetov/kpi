@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\CriterionItemController;
 use App\Http\Controllers\CriterionController;
 use App\Http\Controllers\CriterionCategoryController;
@@ -43,10 +44,15 @@ Route::middleware(['auth'])
         Route::resource('criterion_categories', CriterionCategoryController::class);
         Route::resource('criterions', CriterionController::class);
         Route::resource('criterion_items', CriterionItemController::class);
+        Route::get('applications', [ApplicationController::class, 'index'])->name('admin.applications.index');
+        Route::get('applications/{application}', [ApplicationController::class, 'edit'])->name('admin.applications.edit');
+        Route::put('applications/{application}', [ApplicationController::class, 'update'])->name('admin.applications.update');
 
         // students
         Route::get('students/import', [StudentController::class, 'import_form'])->name('students.import_form');
         Route::post('students/import', [StudentController::class, 'import'])->name('students.import');
+        Route::get('students/{student}/set_score', [StudentController::class, 'setScore'])->name('students.set_score');
+        Route::put('students/{student}/set_score', [StudentController::class, 'setScoreUpdate'])->name('admin.students.set_score.update');
         Route::resource('students', StudentController::class);
 
         // experts

@@ -118,17 +118,23 @@ class Student extends Authenticatable
         return $this->belongsTo(Rank::class);
     }
 
-    public function getTotalPointsAttribute(): float
+    public function getTotalPointsAttribute(): int
     {
-        return round(
-            (
-                $this->ielts_calculate() +
-                $this->patents_calculate() +
-                $this->articles_calculate() +
-                $this->projects_calculate() +
-                $this->schoolarships_calculate() +
-                $this->test_calculate()
-            )/6, 2);
+        return Application::query()
+            ->where([
+                ['student_id', '=', $this->id],
+                ['status', '!=', 1]
+            ])->sum('score');
+        
+        // return round(
+        //     (
+        //         $this->ielts_calculate() +
+        //         $this->patents_calculate() +
+        //         $this->articles_calculate() +
+        //         $this->projects_calculate() +
+        //         $this->schoolarships_calculate() +
+        //         $this->test_calculate()
+        //     )/6, 2);
     }
 
     // for get total points

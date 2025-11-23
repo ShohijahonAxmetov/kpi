@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Application;
+use App\Models\Criterion\CriterionMainCategory;
 use App\Models\Dictionaries\AcademicDegree;
 use App\Models\Dictionaries\AcademicTitle;
 use App\Models\Dictionaries\Rank;
@@ -10,6 +11,7 @@ use App\Models\Direction;
 use App\Models\Faculty;
 use App\Models\Student;
 use App\Models\University;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -35,6 +37,9 @@ class StudentController extends Controller
         }
         if (isset($_GET['faculty_id']) && $_GET['faculty_id'] != '') {
             $students = $students->where('faculty_id', $_GET['faculty_id']);
+        }
+        if (isset($_GET['direction_id']) && $_GET['direction_id'] != '') {
+            $students = $students->where('direction_id', $_GET['direction_id']);
         }
 
         if (!is_null(auth()->user()->university_id)) {
@@ -111,7 +116,7 @@ class StudentController extends Controller
         if ($validator->fails()) {
             return back()->withInput()->with([
                 'success' => false,
-                'message' => 'Ma\'lumotlar notog\'ri kiritildi'
+                'message' => $validator->errors()->first()
             ]);
         }
 
@@ -285,6 +290,37 @@ class StudentController extends Controller
             ->with([
                 'success' => true,
                 'message' => 'Импортировано'
+        ]);
+    }
+
+    public function setScore(Student $student)
+    {
+        return view('app.students.set_score', [
+            'title' => $student->name,
+            'route_name' => 'students',
+            'student' => $student,
+            'criterionMainCategories' => CriterionMainCategory::orderBy('order')->get()
+        ]);
+    }
+
+    public function setScoreUpdate(Student $student, Request $request)
+    {
+        foreach($request->all()['data'] as $criterionId => $data) {
+            Application::query()
+                ->updateOrCreate(
+                    ['student_id' => $student->id, 'criterion_id' => $criterionId],
+                    [
+                        'score' => $data['score'],
+                        'answer' => $data['comment'],
+                        'status' => 5,
+                        'comment' => ''
+                    ]
+                );
+        }
+
+        return back()->with([
+            'success' => true,
+            'message' => 'Muvaffaqiyatli saqlandi'
         ]);
     }
 }

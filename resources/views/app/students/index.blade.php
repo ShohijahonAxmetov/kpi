@@ -118,7 +118,8 @@
                             <td>{{ $item->total_points }}</td>
                             <td style="width: 200px">
                                 <div class="d-flex justify-content-end">
-                                    <a href="{{ route($route_name.'.edit', [$route_parameter => $item]) }}" class="btn btn-sm btn-info"><i class="fe fe-edit-2"></i></a>
+                                    <a href="{{ route($route_name.'.set_score', [$route_parameter => $item]) }}" class="btn btn-sm btn-warning"><i class="fe fe-check-circle"></i></a>
+                                    <a href="{{ route($route_name.'.edit', [$route_parameter => $item]) }}" class="btn btn-sm btn-info ms-3"><i class="fe fe-edit-2"></i></a>
                                     <a class="btn btn-sm btn-danger ms-3" onclick="var result = confirm('Want to delete?');if (result){event.preventDefault();document.getElementById('delete-form{{ $item->id }}').submit();}"><i class="fe fe-trash"></i></a>
                                     <form action="{{ route($route_name.'.destroy', [$route_parameter => $item]) }}" id="delete-form{{ $item->id }}" method="POST" style="display: none;">
                                         @csrf

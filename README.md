@@ -33,3 +33,6 @@ dlya ostalnix
 
 # dorabotki
 1. admin userlarning parolini reset qilish funkciyasi
+
+# statuses
+1 - yangi ariza (pedagog yuborgan ariza)

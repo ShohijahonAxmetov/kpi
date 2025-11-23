@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Students;
 
-use App\Http\Controllers\Controller;
+use App\Models\Criterion\CriterionMainCategory;
 use App\Models\Certificate\Certificate;
 use App\Models\Article;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -12,9 +13,10 @@ class HomeController extends Controller
 {
     public function index()
     {
+        $criterionMainCategories = CriterionMainCategory::with('criterionCategories')->orderBy('order')->get();
         $user = auth()->user();
         $total = round(($user->ielts_calculate() + $user->patents_calculate() + $user->articles_calculate() + $user->projects_calculate() + $user->schoolarships_calculate() + $user->test_calculate())/6, 2);
-        return view('students.home', compact('total'));
+        return view('students.home', compact('total', 'criterionMainCategories'));
     }
 
     public function update(Request $request)

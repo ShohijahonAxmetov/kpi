@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Observers\ApplicationObserver;
+use App\Models\Application;
 use App\Models\Config;
 use App\Models\ConfigGroup;
 use Illuminate\Support\Facades\Schema;
@@ -47,5 +49,7 @@ class AppServiceProvider extends ServiceProvider
         }
         View::share('menu_items', $menu_items);
         View::share('menu_items_groups', $menu_items_groups);
+
+        Application::observe(ApplicationObserver::class);
     }
 }

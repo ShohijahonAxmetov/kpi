@@ -2,40 +2,66 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Lang;
+use App\Models\Criterion\CriterionMainCategory;
 use App\Models\Criterion\CriterionCategory;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class CriterionCategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public $title = 'Ichki bo\'limlari';
+    public $route_name = 'criterion_categories';
+    public $route_parameter = 'criterion_category';
+
     public function index()
     {
-        //
+        ${$this->route_name} = CriterionCategory::latest()
+            ->paginate(12);
+
+        return view('app.'.$this->route_name.'.index', [
+            'title' => $this->title,
+            'route_name' => $this->route_name,
+            'route_parameter' => $this->route_parameter,
+            $this->route_name => ${$this->route_name},
+            'languages' => Lang::all()
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('app.'.$this->route_name.'.create', [
+            'title' => $this->title,
+            'route_name' => $this->route_name,
+            'route_parameter' => $this->route_parameter,
+            'criterionMainCategories' => CriterionMainCategory::orderBy('order')->get(),
+            'langs' => Lang::all()
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $validator = Validator::make($data, [
+            'name' => 'required',
+            'max_score' => 'required|integer',
+            'criterion_main_category_id' => 'required|exists:criterion_main_categories,id'
+        ]);
+        if ($validator->fails()) {
+            return back()->withInput()->with([
+                'success' => false,
+                'message' => $validator->errors()->first()
+            ]);
+        }
+
+        CriterionCategory::create($data);
+
+        return redirect()->route($this->route_name.'.index')->with([
+            'success' => true,
+            'message' => 'Muvaffaqiyatli saqlandi'
+        ]);
     }
 
     /**
@@ -49,37 +75,49 @@ class CriterionCategoryController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Criterion\CriterionCategory  $criterionCategory
-     * @return \Illuminate\Http\Response
-     */
     public function edit(CriterionCategory $criterionCategory)
     {
-        //
+        return view('app.'.$this->route_name.'.edit', [
+            'title' => $this->title,
+            'route_name' => $this->route_name,
+            'route_parameter' => $this->route_parameter,
+            'criterionMainCategories' => CriterionMainCategory::orderBy('order')->get(),
+            'langs' => Lang::all(),
+            $this->route_parameter => ${Str::camel($this->route_parameter)}
+        ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Criterion\CriterionCategory  $criterionCategory
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, CriterionCategory $criterionCategory)
     {
-        //
+        $data = $request->all();
+
+        $validator = Validator::make($data, [
+            'name' => 'required',
+            'max_score' => 'required|integer',
+            'criterion_main_category_id' => 'required|exists:criterion_main_categories,id'
+        ]);
+        if ($validator->fails()) {
+            return back()->withInput()->with([
+                'success' => false,
+                'message' => $validator->errors()->first()
+            ]);
+        }
+
+        ${Str::camel($this->route_parameter)}->update($data);
+
+        return redirect()->route($this->route_name.'.index')->with([
+            'success' => true,
+            'message' => 'Muvaffaqiyatli saqlandi'
+        ]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Criterion\CriterionCategory  $criterionCategory
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(CriterionCategory $criterionCategory)
     {
-        //
+        ${Str::camel($this->route_parameter)}->delete();
+
+        return back()->with([
+            'success' => true,
+            'message' => 'Muvaffaqiyatli o\'chirildi'
+        ]);
     }
 }

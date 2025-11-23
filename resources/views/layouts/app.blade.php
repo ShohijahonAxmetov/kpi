@@ -35,7 +35,7 @@
     </script>
 
     <!-- Title -->
-    <title>Dashboard | Kursant salohiyati</title>
+    <title>Dashboard | KPI dasturi</title>
 
     @yield('links')
 
@@ -187,6 +187,11 @@
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('admin/students') || request()->is('admin/students/*') ? 'active' : '' }}" href="{{ route('students.index') }}">
                             <i class="fe fe-users"></i> O'qituvchilar ro'yxati
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('admin/applications') || request()->is('admin/applications/*') ? 'active' : '' }}" href="{{ route('admin.applications.index') }}">
+                            <i class="fe fe-bell"></i> Arizalar
                         </a>
                     </li>
 {{--                    <li class="nav-item">--}}
@@ -349,7 +354,7 @@
     <script type="text/javascript">
         const notyf = new Notyf({
             position: {
-                x: 'right',
+                x: 'center',
                 y: 'top',
             },
             types: [{
@@ -374,7 +379,7 @@
     <script type="text/javascript">
         const notyf = new Notyf({
             position: {
-                x: 'right',
+                x: 'center',
                 y: 'top',
             },
             types: [{

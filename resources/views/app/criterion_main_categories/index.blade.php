@@ -49,14 +49,8 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">O'qituvchi FIOsi</th>
-                            <th scope="col">Mezon</th>
-                            <th scope="col">Yuklangan ma'lumot turi</th>
-                            <th scope="col">Asos (hujjat, fayl)</th>
-                            <th scope="col">Izoh</th>
-                            <th scope="col">Holati</th>
-                            <th scope="col">Berilgan ball</th>
-                            <th scope="col">Kelib tushgan vaqti</th>
+                            <th scope="col">Название</th>
+                            <th scope="col">Eng yuqori ball</th>
                             <th scope="col"></th>
                         </tr>
                     </thead>
@@ -64,29 +58,11 @@
                         @foreach (${$route_name} as $key => $item)
                         <tr>
                             <th scope="row" style="width: 100px">{{ ${$route_name}->firstItem() + $key }}</th>
-                            <td>{{ $item->student->name }}</td>
-                            <td>{{ $item->criterion->name }}</td>
-                            <td>{{ $item->criterionItem->name ?? '-' }}</td>
-                            <td>
-                                @if($item->basis)
-                                    <a href="/upload/files/{{$item->basis}}" target="_blank">@lang('main.upload')</a>
-                                @else
-                                    -
-                                @endif
-                            </td>
-                            <td>{{ $item->comment }}</td>
-                            <td>
-                                @if($item->status == 1)
-                                Yangi
-                                @elseif($item->status == 10)
-                                Ko'rib chiqildi
-                                @endif
-                            </td>
-                            <td>{{ $item->score ?? '-' }}</td>
-                            <td>{{ $item->created_at }}</td>
+                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->max_score }}</td>
                             <td style="width: 200px">
                                 <div class="d-flex justify-content-end">
-                                    <a href="{{ route('admin.'.$route_name.'.edit', [$route_parameter => $item]) }}" class="btn btn-sm btn-info"><i class="fe fe-edit-2"></i></a>
+                                    <a href="{{ route($route_name.'.edit', [$route_parameter => $item]) }}" class="btn btn-sm btn-info"><i class="fe fe-edit-2"></i></a>
                                     <a class="btn btn-sm btn-danger ms-3" onclick="var result = confirm('Want to delete?');if (result){event.preventDefault();document.getElementById('delete-form{{ $item->id }}').submit();}"><i class="fe fe-trash"></i></a>
                                     <form action="{{ route($route_name.'.destroy', [$route_parameter => $item]) }}" id="delete-form{{ $item->id }}" method="POST" style="display: none;">
                                         @csrf

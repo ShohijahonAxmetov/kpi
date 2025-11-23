@@ -6,25 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateCriterionMainCategoriesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
+    public function up(): void
     {
         Schema::create('criterion_main_categories', function (Blueprint $table) {
             $table->id();
+            $table->text('name');
+            $table->integer('max_score');
+            $table->integer('order')->default(1000);
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('criterion_main_categories');
     }

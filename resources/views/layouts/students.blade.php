@@ -22,20 +22,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 
-    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
-    <script>
-        // CKEDITOR.config.toolbar = [
-        // 	{ name: 'document', items : [ 'Undo','Redo'] },
-        // ];
-        // 	{ name: 'basicstyles', items : [ 'Bold','Italic','Underline','Subscript','Superscript','Format' ] },
-        // CKEDITOR.config.filebrowserBrowseUrl = '/browse.php';
-        // CKEDITOR.config.extraPlugins = 'uploadimage';
-        CKEDITOR.config.filebrowserUploadUrl = "{{ route('upload-image', ['_token' => csrf_token()]) }}";
-        CKEDITOR.config.filebrowserUploadMethod = 'form';
-    </script>
-
     <!-- Title -->
-    <title>Dashboard | Students</title>
+    <title>Dashboard | KPI dasturi</title>
 
     @yield('links')
 
@@ -154,42 +142,32 @@
 
                 <!-- Navigation -->
                 <ul class="navbar-nav">
+
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('students.home') ? 'active' : '' }}" href="{{ route('students.home') }}">
                             <i class="fe fe-home"></i> @lang('main.profile.title')
                         </a>
                     </li>
                     <hr class="navbar-divider my-3">
+                    @foreach($criterionMainCategories as $criterionMainCategory)
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('students/tests') || request()->is('students/tests/*') ? 'active' : '' }}" href="{{ route('tests.index') }}">
-                            <i class="fe fe-check-square"></i> @lang('main.test.title')
+                        <a class="nav-link" href="#main_category_{{$criterionMainCategory->id}}" data-bs-toggle="collapse" role="button" aria-expanded="true" aria-controls="documents">
+                            <i class="fe fe-layers"></i> {{$criterionMainCategory->name}}
                         </a>
+                        <div class="collapse show" id="main_category_{{$criterionMainCategory->id}}">
+                            <ul class="nav nav-sm flex-column">
+                                @foreach($criterionMainCategory->criterionCategories as $criterionCategory)
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->is('students/criterion_categories/'.$criterionCategory->id) ? 'active' : '' }}" href="{{ route('students.criterions.index', ['id' => $criterionCategory->id]) }}">
+                                            {{$criterionCategory->name}}
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('students/ielts') || request()->is('students/ielts/*') ? 'active' : '' }}" href="{{ route('ielts.index') }}">
-                            <i class="fe fe-square"></i> @lang('main.foreign_lang_certificates.title')
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('students/certificates') || request()->is('students/certificates/*') ? 'active' : '' }}" href="{{ route('certificates.index') }}">
-                            <i class="fe fe-layers"></i> @lang('main.certificates.title')
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('students/articles') || request()->is('students/articles/*') ? 'active' : '' }}" href="{{ route('articles.index') }}">
-                            <i class="fe fe-book-open"></i> @lang('main.articles.title')
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('students/projects') || request()->is('students/projects/*') ? 'active' : '' }}" href="{{ route('projects.index') }}">
-                            <i class="fe fe-briefcase"></i> @lang('main.projects.title')
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('students/scholarships') || request()->is('students/scholarships/*') ? 'active' : '' }}" href="{{ route('scholarships.index') }}">
-                            <i class="fe fe-dollar-sign"></i> @lang('main.scholarships.title')
-                        </a>
-                    </li>
+                    @endforeach
+
                 </ul>
 
                 <!-- Push content down -->

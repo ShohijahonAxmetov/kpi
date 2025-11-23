@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Students\ApplicationController;
+use App\Http\Controllers\Students\CriterionController;
 use App\Http\Controllers\Students\{
     Auth\LoginController,
     HomeController,
@@ -27,6 +29,10 @@ Route::middleware(['students'])->prefix('students')->group(function () {
         Route::get('/home', [HomeController::class, 'index'])->name('students.home');
         Route::post('/logout', [HomeController::class, 'logout'])->name('students.logout');
         Route::put('/update', [HomeController::class, 'update'])->name('students.update');
+
+        Route::get('criterion_categories/{id}', [CriterionController::class, 'index'])->name('students.criterions.index');
+        Route::get('criterion_categories/{id}/criterions/{criterion_id}', [CriterionController::class, 'show'])->name('students.criterions.show');
+        Route::resource('applications', ApplicationController::class);
 
         Route::get('/tests', [TestController::class, 'index'])->name('tests.index');
         Route::post('/tests', [TestController::class, 'store'])->name('tests.store');
