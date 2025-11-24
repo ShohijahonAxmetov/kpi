@@ -39,7 +39,7 @@
 
 <!-- CARDS -->
 <div class="container-fluid">
-    <form action="{{ route($route_name . '.update', [$route_parameter => $student]) }}" method="post" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('admin.'.$route_name.'.update', ['student' => $student]) }}">
         @csrf
         @method('put')
         <div class="row">

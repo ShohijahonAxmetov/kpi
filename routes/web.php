@@ -50,6 +50,7 @@ Route::middleware(['auth'])
 
         // students
         Route::get('students/import', [StudentController::class, 'import_form'])->name('students.import_form');
+        Route::put('students/{student}', [StudentController::class, 'update'])->name('admin.students.update');
         Route::post('students/import', [StudentController::class, 'import'])->name('students.import');
         Route::get('students/{student}/set_score', [StudentController::class, 'setScore'])->name('students.set_score');
         Route::put('students/{student}/set_score', [StudentController::class, 'setScoreUpdate'])->name('admin.students.set_score.update');
