@@ -15,7 +15,7 @@
             @endphp
             @if(!$criterion->entered_manually)
                 <p>Bu mezon ilmiy kengash tomonidan baholanadi. Sizga berilgan ball: <strong>{{$application->score ?? '-'}}</strong></p>
-                <p><i>Izoh: {{$application->answer}}</i></p>
+                <p><i>Izoh: {{$application->answer ?? '-'}}</i></p>
             @else
             <!-- Form -->
             <form method="POST" action="{{route('applications.store')}}" enctype="multipart/form-data">
